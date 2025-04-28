@@ -1,0 +1,176 @@
+
+/* if have time: try media queries */
+
+
+/* learning note: selectors -- https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors  */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    background-color: #fafafa;
+  }
+  
+ 
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3e4e50;
+    padding: 1rem 2rem;
+    color: #ffffff;
+  }
+  
+  header nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  header .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+ 
+  main {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+
+  aside {
+    background-color: #e0e0e0;
+    padding: 1rem;
+    min-width: 12rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  aside ul {
+    list-style: none;
+  }
+  
+  aside li {
+    background-color: #d0d0d0;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+  
+  
+  article {
+    flex-grow: 1;
+    padding: 2rem;
+  }
+  
+  article h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  article p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  
+  .testimonial {
+    background-color: lightyellow;
+    padding: 1rem;
+    margin: 2rem 0;
+    border-left: 5px solid #c94c4c;
+    border-radius: 0.5rem;
+  }
+  
+  .testimonial blockquote {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  footer {
+    background-color: #3e4e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  
+  header, footer, aside, article {
+    font-size: 1rem;
+  }
+  
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    header nav {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+  
+    main {
+      flex-direction: column;
+    }
+  
+    aside {
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+    }
+  
+    aside ul {
+      display: flex;
+      gap: 1rem;
+    }
+  
+    aside li {
+      min-width: 6rem;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header .brand {
+      font-size: 1.25rem;
+    }
+  
+    article {
+      padding: 1rem;
+    }
+  
+    .testimonial {
+      margin: 1rem 0;
+      padding: 0.75rem;
+    }
+  }
+  
+
+
+
